@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Publications | Robotics Researcher" description="Academic publications and preprints.">
+  <div class="max-w-3xl space-y-8">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-900">Publications</h1>
+    
+    <div class="space-y-6">
+      <!-- Publication Item 1 -->
+      <div class="p-5 border border-slate-200 bg-white rounded-lg space-y-2">
+        <span class="inline-block px-2.5 py-0.5 rounded text-xs font-medium bg-blue-50 text-blue-700">Preprint</span>
+        <h2 class="text-lg font-semibold text-slate-900">
+          State Estimation and Sensor Fusion for UAV Navigation in GPS-Denied Environments
+        </h2>
+        <p class="text-sm text-slate-600">
+          <strong>Your Name</strong>, Co-authors.
+        </p>
+        <p class="text-xs text-slate-400">arXiv:xxxx.xxxxx, 2026</p>
+        <div class="flex gap-4 pt-2 text-sm">
+          <a href="#" class="text-blue-600 hover:underline">PDF</a>
+          <a href="#" class="text-blue-600 hover:underline">Code</a>
+          <a href="#" class="text-blue-600 hover:underline">BibTeX</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Projects | Robotics Researcher" description="Robotics and embedded systems projects.">
+  <div class="max-w-4xl space-y-8">
+    <h1 class="text-3xl font-bold tracking-tight text-slate-900">Projects</h1>
+    
+    <div class="grid gap-6 md:grid-cols-2">
+      <!-- Project 1 -->
+      <div class="border border-slate-200 bg-white rounded-lg overflow-hidden flex flex-col justify-between p-6">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 mb-2">EKF-Based GPS/IMU Fusion</h2>
+          <p class="text-slate-600 text-sm mb-4">
+            Implementation of an Extended Kalman Filter in MATLAB/Simulink for fusing IMU data with intermittent GPS updates.
+          </p>
+        </div>
+        <div class="flex gap-2">
+          <span class="text-xs px-2 py-1 bg-slate-100 rounded text-slate-600">MATLAB</span>
+          <span class="text-xs px-2 py-1 bg-slate-100 rounded text-slate-600">EKF</span>
+          <span class="text-xs px-2 py-1 bg-slate-100 rounded text-slate-600">Sensor Fusion</span>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="border border-slate-200 bg-white rounded-lg overflow-hidden flex flex-col justify-between p-6">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900 mb-2">CMOS Analog Circuit Design</h2>
+          <p class="text-slate-600 text-sm mb-4">
+            HSPICE simulation of high-performance CMOS operational amplifiers optimized for robotic sensor interfaces.
+          </p>
+        </div>
+        <div class="flex gap-2">
+          <span class="text-xs px-2 py-1 bg-slate-100 rounded text-slate-600">HSPICE</span>
+          <span class="text-xs px-2 py-1 bg-slate-100 rounded text-slate-600">Analog Design</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

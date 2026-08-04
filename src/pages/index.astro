@@ -1,17 +1,50 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+  title="Your Name | Robotics Researcher"
+  description="Personal academic website for robotics research, projects, publications, and technical writing."
+>
+  <section class="grid gap-10 md:grid-cols-[1.4fr_0.8fr] md:items-start">
+    <div class="space-y-6">
+      <p class="text-sm font-medium uppercase tracking-[0.2em] text-slate-500">
+        Robotics Researcher
+      </p>
+
+      <h1 class="text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+        Sensor Fusion, Estimation, and Autonomous Systems
+      </h1>
+
+      <p class="max-w-2xl text-lg leading-8 text-slate-600">
+        I work on state estimation, GPS/IMU fusion, visual geometry, and control for autonomous robots.
+        This site collects my research projects, publications, experiments, and technical notes.
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <a
+          href="/projects"
+          class="rounded-md bg-slate-900 px-5 py-3 text-sm font-medium text-white hover:bg-slate-700"
+        >
+          View Projects
+        </a>
+        <a
+          href="/publications"
+          class="rounded-md border border-slate-300 px-5 py-3 text-sm font-medium text-slate-700 hover:border-slate-400 hover:text-slate-900"
+        >
+          See Publications
+        </a>
+      </div>
+    </div>
+
+    <aside class="rounded-lg border border-slate-200 bg-white p-6">
+      <h2 class="text-base font-semibold text-slate-900">Current Focus</h2>
+      <ul class="mt-4 space-y-3 text-sm text-slate-600">
+        <li>Extended Kalman Filter for multi-sensor fusion</li>
+        <li>Trajectory estimation and localization</li>
+        <li>Stereo vision and feature matching</li>
+        <li>Path planning for autonomous platforms</li>
+      </ul>
+    </aside>
+  </section>
+</BaseLayout>

@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About Me | Robotics Researcher" description="Biography and research interests.">
+  <div class="max-w-3xl space-y-8">
+    <section class="space-y-4">
+      <h1 class="text-3xl font-bold tracking-tight text-slate-900">About Me</h1>
+      <p class="text-lg leading-8 text-slate-600">
+        I am a robotics researcher focused on state estimation, sensor fusion, and autonomous systems. 
+        My work involves developing robust localization algorithms and integrating diverse sensor suites 
+        to enable precise navigation in challenging environments.
+      </p>
+    </section>
+
+    <section class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Research Interests</h2>
+      <ul class="list-disc pl-5 space-y-2 text-slate-600">
+        <li>Multi-sensor fusion (GPS/IMU/Visual Odometry) using Extended Kalman Filtering (EKF).</li>
+        <li>Trajectory estimation and SLAM (Simultaneous Localization and Mapping).</li>
+        <li>Stereo vision geometry and correspondence/block matching algorithms.</li>
+        <li>CMOS Analog Circuit Design for low-power sensor interfaces.</li>
+      </ul>
+    </section>
+
+    <section class="space-y-4">
+      <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Education</h2>
+      <div class="border-l-2 border-slate-200 pl-4 space-y-4">
+        <div>
+          <h3 class="font-semibold text-slate-900">M.Sc. / Research Path in Robotics & Computer Engineering</h3>
+          <p class="text-sm text-slate-500">Current Studies</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
