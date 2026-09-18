@@ -1,0 +1,3 @@
+User-agent: * 
+Allow: / 
+Sitemap: https://niushasedgh.me/sitemap-index.xml 
