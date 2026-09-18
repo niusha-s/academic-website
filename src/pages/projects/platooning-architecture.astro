@@ -1,0 +1,73 @@
+---
+// src/pages/projects/platooning-architecture.astro
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const projectTitle = "Hybrid Data-Model-Knowledge Architecture for Platooning";
+const mathFormula = `$$\\dot{x}_i(t) = f(x_i(t), u_i(t)) + w_i(t)$$`;
+---
+
+<BaseLayout title={projectTitle}>
+  <article class="max-w-4xl mx-auto py-10 px-4">
+    <header class="mb-8 border-b pb-6">
+      <h1 class="text-4xl font-extrabold text-slate-900 mb-4">{projectTitle}</h1>
+      <div class="flex gap-2">
+        <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-medium">Research</span>
+        <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium">2026</span>
+      </div>
+    </header>
+    <section class="mb-10">
+        <h2 class="text-2xl font-bold mb-4">Project Overview</h2>
+        <p class="text-slate-700 leading-relaxed">
+          This project focuses on the development of a multi-layer supervisor control architecture. 
+          The goal is to bridge the gap between high-level Reinforcement Learning policies and 
+          low-level vehicle dynamics using Digital Twins.
+        </p>
+      </section>
+      
+    <div class="prose prose-slate max-w-none">
+      <!-- بخش معماری سیستم -->
+      <section class="mb-10">
+        <h2 class="text-2xl font-bold mb-4">System Architecture</h2>
+        <figure class="my-6">
+          <img
+            src="/images/projects/platooning-architecture.png"
+            alt="Hybrid hierarchical control architecture for vehicle platooning"
+            class="w-full rounded-xl border border-slate-200 shadow-sm"
+            loading="lazy"
+          />
+          <figcaption class="text-sm text-slate-500 mt-3">
+            Hybrid hierarchical control architecture: High-Level AI Decision Maker,
+            Safety Supervisor, and Low-Level Model-Based Controller.
+          </figcaption>
+        </figure>
+      </section>
+
+      
+
+      
+      <!-- بخش دانلود گزارش‌کار -->
+      <section class="mb-10 border-t pt-8">
+        <h2 class="text-2xl font-bold mb-4">Project Documentation</h2>
+        <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div>
+            <h3 class="text-lg font-semibold text-slate-800">Final Report</h3>
+            <p class="text-sm text-slate-500">Not uploaded yet.</p>
+          </div>
+          <a 
+            href="/files/reports/platooning-report.pdf" 
+            download
+            class="inline-flex items-center justify-center px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-colors text-sm shadow-sm"
+          >
+            Download PDF Report
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <footer class="mt-12 pt-6 border-t">
+      <a href="/projects" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center gap-2">
+        ← Back to Projects
+      </a>
+    </footer>
+  </article>
+</BaseLayout>

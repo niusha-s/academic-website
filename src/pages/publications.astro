@@ -2,26 +2,86 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Publications | Robotics Researcher" description="Academic publications and preprints.">
+<BaseLayout
+  title="Publications | Robotics Researcher"
+  description="Academic publications and book chapters."
+>
   <div class="max-w-3xl space-y-8">
-    <h1 class="text-3xl font-bold tracking-tight text-slate-900">Publications</h1>
-    
+    <h1 class="text-3xl font-bold tracking-tight text-slate-900">
+      Publications
+    </h1>
+
     <div class="space-y-6">
       <!-- Publication Item 1 -->
-      <div class="p-5 border border-slate-200 bg-white rounded-lg space-y-2">
-        <span class="inline-block px-2.5 py-0.5 rounded text-xs font-medium bg-blue-50 text-blue-700">Preprint</span>
-        <h2 class="text-lg font-semibold text-slate-900">
-          State Estimation and Sensor Fusion for UAV Navigation in GPS-Denied Environments
+      <div class="p-5 border border-slate-200 bg-white rounded-lg space-y-3">
+
+        <!-- Publication Type -->
+        <span
+          class="inline-block px-2.5 py-0.5 rounded text-xs font-medium bg-blue-50 text-blue-700"
+        >
+          Book Chapter
+        </span>
+
+        <!-- Chapter Title -->
+        <h2 class="text-lg font-semibold leading-snug text-slate-900">
+          Scenario Reduction Methods: Clustering, Fast Forward Selection
+          and Distance Metrics
         </h2>
-        <p class="text-sm text-slate-600">
-          <strong>Your Name</strong>, Co-authors.
+
+        <!-- Authors -->
+        <p class="text-sm leading-relaxed text-slate-600">
+          Mahmoud Mollayousefi Zadeh,
+          <strong class="text-slate-900">Niusha Mohammadi Sedgh</strong>,
+          Rozhina Mohammadi,
+          Sonia Zakeri,
+          Mohammad Hossein Alizadeh,
+          and Seyed Mohammad Taghi Bathaee
         </p>
-        <p class="text-xs text-slate-400">arXiv:xxxx.xxxxx, 2026</p>
-        <div class="flex gap-4 pt-2 text-sm">
-          <a href="#" class="text-blue-600 hover:underline">PDF</a>
-          <a href="#" class="text-blue-600 hover:underline">Code</a>
-          <a href="#" class="text-blue-600 hover:underline">BibTeX</a>
+
+        <!-- Book Information -->
+        <p class="text-sm text-slate-600">
+          In:
+          <em>Stochastic Planning and Modeling for Energy Systems:
+          Methods, Applications, and Developments</em>
+        </p>
+
+        <!-- Editor -->
+        <p class="text-sm text-slate-600">
+          Edited by Miadreza Shafie-khah
+        </p>
+
+        <!-- Publication Details -->
+        <p class="text-xs text-slate-400">
+          Elsevier, 2025 · pp. 49–77
+        </p>
+
+        <!-- Links -->
+        <div class="flex flex-wrap gap-4 pt-2 text-sm">
+          <a
+            href="https://shop.elsevier.com/books/stochastic-planning-and-modeling-for-energy-systems/shafie-khah/978-0-443-45298-7"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-blue-600 hover:underline"
+          >
+            View Book
+          </a>
+
+          <a
+            href="#"
+            class="text-slate-400 cursor-not-allowed"
+            aria-disabled="true"
+          >
+            DOI
+          </a>
+
+          <a
+            href="#"
+            class="text-blue-600 hover:underline"
+          >
+            BibTeX
+          </a>
         </div>
+
       </div>
     </div>
   </div>

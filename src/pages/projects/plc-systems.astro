@@ -1,0 +1,202 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const projectTitle = "PLC and Industrial Automation Projects";
+---
+
+<BaseLayout title={projectTitle}>
+  <article class="max-w-4xl mx-auto py-10 px-4">
+    
+    <header class="mb-8 border-b pb-6">
+      <h1 class="text-4xl font-extrabold text-slate-900 mb-4">
+        {projectTitle}
+      </h1>
+
+      <div class="flex gap-2 flex-wrap">
+        <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-medium">
+          Industrial Automation
+        </span>
+        <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium">
+          2024
+        </span>
+      </div>
+    </header>
+
+    <div class="prose prose-slate max-w-none space-y-12">
+
+      <!-- Project 1 -->
+      <section class="border-b pb-10">
+        <h2 class="text-3xl font-bold text-slate-800 mb-4">
+          Project 1: Multi-Belt Conveyor Synchronization System
+        </h2>
+
+        <p class="text-slate-700 leading-relaxed mb-6">
+          A PLC-based conveyor control system designed to coordinate the
+          operation of multiple conveyor belts. The system manages the
+          movement and synchronization of packages between conveyor sections
+          to achieve smooth and coordinated material handling.
+        </p>
+
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold mb-3">
+            Conveyor System Demo
+          </h3>
+
+          <div class="aspect-video w-full rounded-xl overflow-hidden shadow-md border border-slate-200 bg-slate-950">
+            <video controls class="w-full h-full object-cover">
+              <source
+                src="/videos/plc-conveyor-demo.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div>
+            <h4 class="text-lg font-semibold text-slate-800">
+              PLC Program
+            </h4>
+            <p class="text-sm text-slate-500">
+              PLC control code and implementation files for the conveyor system.
+            </p>
+          </div>
+
+          <a
+            href="/files/code/plc-conveyor-code.pdf"
+            download
+            class="inline-flex items-center justify-center px-5 py-3 bg-orange-600 hover:bg-orange-700 text-white font-medium rounded-lg transition-colors text-sm shadow-sm"
+          >
+            Download Source Code
+          </a>
+        </div>
+      </section>
+
+
+      <!-- Project 2 -->
+      <section class="pb-10">
+        <h2 class="text-3xl font-bold text-slate-800 mb-4">
+          Project 2: Automated Warehouse and Package Handling System
+        </h2>
+
+        <p class="text-slate-700 leading-relaxed mb-6">
+          An automated warehouse system designed to receive packages,
+          transport them through the system, place them in designated storage
+          locations, and retrieve stored packages when requested. The
+          PLC-based control system coordinates package movement, storage,
+          retrieval, and the overall operating sequence of the warehouse.
+        </p>
+
+        <!-- Workflow -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 my-8">
+
+          <div class="bg-orange-50 border border-orange-100 rounded-xl p-4 text-center">
+            <div class="text-xs font-bold text-orange-500 mb-2">01</div>
+            <h3 class="text-sm font-semibold text-slate-800">
+              Package Receiving
+            </h3>
+            <p class="text-xs text-slate-500 mt-1">
+              Packages enter the system
+            </p>
+          </div>
+
+          <div class="bg-orange-50 border border-orange-100 rounded-xl p-4 text-center">
+            <div class="text-xs font-bold text-orange-500 mb-2">02</div>
+            <h3 class="text-sm font-semibold text-slate-800">
+              Package Transport
+            </h3>
+            <p class="text-xs text-slate-500 mt-1">
+              Packages move through the system
+            </p>
+          </div>
+
+          <div class="bg-orange-50 border border-orange-100 rounded-xl p-4 text-center">
+            <div class="text-xs font-bold text-orange-500 mb-2">03</div>
+            <h3 class="text-sm font-semibold text-slate-800">
+              Automated Storage
+            </h3>
+            <p class="text-xs text-slate-500 mt-1">
+              Packages are placed in assigned locations
+            </p>
+          </div>
+
+          <div class="bg-orange-50 border border-orange-100 rounded-xl p-4 text-center">
+            <div class="text-xs font-bold text-orange-500 mb-2">04</div>
+            <h3 class="text-sm font-semibold text-slate-800">
+              Package Retrieval
+            </h3>
+            <p class="text-xs text-slate-500 mt-1">
+              Stored packages are retrieved
+            </p>
+          </div>
+
+          <div class="bg-orange-50 border border-orange-100 rounded-xl p-4 text-center">
+            <div class="text-xs font-bold text-orange-500 mb-2">05</div>
+            <h3 class="text-sm font-semibold text-slate-800">
+              Package Output
+            </h3>
+            <p class="text-xs text-slate-500 mt-1">
+              Packages are transferred to the output
+            </p>
+          </div>
+
+        </div>
+
+
+        <!-- Demo -->
+        <div class="mb-6">
+          <h3 class="text-xl font-semibold mb-3">
+            Automated Warehouse Demo
+          </h3>
+
+          <div class="aspect-video w-full rounded-xl overflow-hidden shadow-md border border-slate-200 bg-slate-950">
+            <video controls class="w-full h-full object-cover">
+              <source
+                src="/videos/plc-level-demo2.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+
+        <!-- Source Code -->
+        <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div>
+            <h4 class="text-lg font-semibold text-slate-800">
+              PLC Program
+            </h4>
+
+            <p class="text-sm text-slate-500">
+              PLC control code for package handling, automated storage,
+              retrieval, and warehouse sequencing.
+            </p>
+          </div>
+
+          <a
+            href="/files/code/plc-warehouse-code.pdf"
+            download
+            class="inline-flex items-center justify-center px-5 py-3 bg-orange-600 hover:bg-orange-700 text-white font-medium rounded-lg transition-colors text-sm shadow-sm"
+          >
+            Download Source Code
+          </a>
+        </div>
+
+      </section>
+
+    </div>
+
+
+    <footer class="mt-12 pt-6 border-t">
+      <a
+        href="/projects"
+        class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center gap-2"
+      >
+        ← Back to Projects
+      </a>
+    </footer>
+
+  </article>
+</BaseLayout>

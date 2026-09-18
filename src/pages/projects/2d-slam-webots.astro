@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const projectTitle = "Collaborative Maze Navigation with e-puck Robots";
+const slamFormula = `$$z_t = h(x_t, m) + v_t$$`;
+---
+
+<BaseLayout title={projectTitle}>
+  <article class="max-w-4xl mx-auto py-10 px-4">
+    <header class="mb-8 border-b pb-6">
+      <h1 class="text-4xl font-extrabold text-slate-900 mb-4">{projectTitle}</h1>
+      <div class="flex gap-2">
+        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Robotics</span>
+        <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium">2025</span>
+      </div>
+    </header>
+
+    <div class="prose prose-slate max-w-none">
+      <!-- ویدیو شبیه‌سازی -->
+      <section class="mb-10">
+        <h2 class="text-2xl font-bold mb-4">Simulation Run</h2>
+        <div class="aspect-video w-full rounded-xl overflow-hidden shadow-md border border-slate-200 bg-slate-950">
+          <video controls class="w-full h-full object-cover">
+            <source src="/videos/slam-demo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-2xl font-bold mb-4">Algorithm Implementation</h2>
+        <p class="text-slate-700 leading-relaxed">
+          Implementation of Simultaneous Localization and Mapping using Lidar data in the Webots 
+          simulation environment.
+        </p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-2xl font-bold mb-4">Observation Model</h2>
+        <div class="bg-slate-50 p-6 rounded-lg border border-slate-100 flex justify-center my-6">
+          <div class="text-lg italic text-slate-800" set:html={slamFormula} />
+        </div>
+      </section>
+
+      <!-- گزارش‌کار پروژه -->
+      <section class="mb-10 border-t pt-8">
+        <h2 class="text-2xl font-bold mb-4">Project Documentation</h2>
+        <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div>
+            <h3 class="text-lg font-semibold text-slate-800">SLAM Report</h3>
+            <p class="text-sm text-slate-500">Mapping accuracy analysis and path planning algorithm verification.</p>
+          </div>
+          <a 
+            href="/files/reports/report_2d.pdf" 
+            download
+            class="inline-flex items-center justify-center px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-colors text-sm shadow-sm"
+          >
+            Download PDF Report
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <footer class="mt-12 pt-6 border-t">
+      <a href="/projects" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center gap-2">
+        ← Back to Projects
+      </a>
+    </footer>
+  </article>
+</BaseLayout>

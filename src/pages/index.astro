@@ -3,48 +3,237 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout
-  title="Your Name | Robotics Researcher"
-  description="Personal academic website for robotics research, projects, publications, and technical writing."
+  title="Niusha Sedgh | Electrical Engineering & Robotics"
+  description="Academic portfolio of Niusha Sedgh, an electrical engineering student working on control, robotics, autonomous systems, and intelligent technologies."
 >
-  <section class="grid gap-10 md:grid-cols-[1.4fr_0.8fr] md:items-start">
-    <div class="space-y-6">
-      <p class="text-sm font-medium uppercase tracking-[0.2em] text-slate-500">
-        Robotics Researcher
-      </p>
+  <div class="space-y-16">
 
-      <h1 class="text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
-        Sensor Fusion, Estimation, and Autonomous Systems
-      </h1>
+    <!-- Hero -->
+    <section class="grid gap-10 md:grid-cols-[1.5fr_0.8fr] md:items-center">
 
-      <p class="max-w-2xl text-lg leading-8 text-slate-600">
-        I work on state estimation, GPS/IMU fusion, visual geometry, and control for autonomous robots.
-        This site collects my research projects, publications, experiments, and technical notes.
-      </p>
+      <div class="space-y-6">
 
-      <div class="flex flex-wrap gap-4">
-        <a
-          href="/projects"
-          class="rounded-md bg-slate-900 px-5 py-3 text-sm font-medium text-white hover:bg-slate-700"
-        >
-          View Projects
-        </a>
-        <a
-          href="/publications"
-          class="rounded-md border border-slate-300 px-5 py-3 text-sm font-medium text-slate-700 hover:border-slate-400 hover:text-slate-900"
-        >
-          See Publications
-        </a>
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">
+            Electrical Engineering · Control · Robotics
+          </p>
+
+          <h1 class="mt-3 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
+            Niusha Sedgh
+          </h1>
+        </div>
+
+        <p class="max-w-2xl text-xl leading-8 text-slate-600">
+          Electrical engineering student interested in 
+          
+             control systems, robotics, and autonomous systems
+          
+          with a focus on combining classical control with
+          AI-driven methods for intelligent autonomous platforms.
+        </p>
+
+        <p class="max-w-2xl text-base leading-7 text-slate-500">
+          My work explores areas such as intelligent control, reinforcement
+          learning, autonomous vehicles, multi-agent systems, sensor fusion,
+          and navigation. I use this website to document my research,
+          engineering projects, publications, and ongoing work.
+        </p>
+
+        <div class="flex flex-wrap gap-3 pt-2">
+
+          <a
+            href="/projects"
+            class="rounded-lg bg-slate-900 px-5 py-3 text-sm font-medium text-white
+                   hover:bg-slate-700 transition-colors"
+          >
+            View Projects
+          </a>
+
+          <a
+            href="/publications"
+            class="rounded-lg border border-slate-300 bg-white px-5 py-3 text-sm
+                   font-medium text-slate-700 hover:border-indigo-300
+                   hover:text-indigo-700 transition-colors"
+          >
+            Publications
+          </a>
+
+          <a
+            href="/contact"
+            class="rounded-lg border border-slate-200 px-5 py-3 text-sm
+                   font-medium text-slate-600 hover:border-slate-300
+                   hover:text-slate-900 transition-colors"
+          >
+            Contact
+          </a>
+
+        </div>
       </div>
-    </div>
 
-    <aside class="rounded-lg border border-slate-200 bg-white p-6">
-      <h2 class="text-base font-semibold text-slate-900">Current Focus</h2>
-      <ul class="mt-4 space-y-3 text-sm text-slate-600">
-        <li>Extended Kalman Filter for multi-sensor fusion</li>
-        <li>Trajectory estimation and localization</li>
-        <li>Stereo vision and feature matching</li>
-        <li>Path planning for autonomous platforms</li>
-      </ul>
-    </aside>
-  </section>
+       <!-- Current Status -->
+      <aside class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+
+        <p class="text-sm font-semibold uppercase tracking-wider text-slate-500">
+          Current Status
+        </p>
+
+        <div class="mt-5 space-y-4">
+
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wider text-indigo-600">
+              Bachelor Thesis
+            </p>
+
+            <p class="mt-1 text-sm leading-6 text-slate-700">
+              Hybrid intelligent control architecture for vehicle platooning
+            </p>
+          </div>
+
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wider text-violet-600">
+              Current Stage
+            </p>
+
+            <p class="mt-1 text-sm leading-6 text-slate-700">
+              Literature review, system design, and research development
+            </p>
+          </div>
+
+        </div>
+
+      </aside>
+
+    </section>
+      
+    <!-- Current Focus -->
+    <section class="border-t border-slate-200 pt-12">
+
+      <div class="max-w-4xl">
+
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">
+          Current Focus
+        </p>
+
+        <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900">
+          Developing a Hybrid Control Architecture for Vehicle Platooning
+        </h2>
+
+        <p class="mt-5 text-base leading-8 text-slate-600">
+          My current focus is my bachelor's thesis, which explores a
+          multi-layer control architecture for autonomous vehicle platooning.
+          The main idea is to combine learning-based decision making with
+          model-based control and a digital-twin layer to improve both
+          performance and safety.
+        </p>
+
+      </div>
+
+
+      <div class="mt-8 grid gap-4 md:grid-cols-2">
+
+        <!-- RL -->
+        <div class="rounded-xl border border-slate-200 bg-white p-6">
+
+          <p class="text-xs font-semibold uppercase tracking-wider text-indigo-600">
+            01 · Learning Layer
+          </p>
+
+          <h3 class="mt-2 text-lg font-semibold text-slate-900">
+            Reinforcement Learning
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-slate-600">
+            Exploring reinforcement learning as a high-level decision-making
+            layer for long-term planning and optimization in vehicle platooning.
+          </p>
+
+        </div>
+
+
+        <!-- MPC -->
+        <div class="rounded-xl border border-slate-200 bg-white p-6">
+
+          <p class="text-xs font-semibold uppercase tracking-wider text-violet-600">
+            02 · Safety Layer
+          </p>
+
+          <h3 class="mt-2 text-lg font-semibold text-slate-900">
+            Model-Based Control
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-slate-600">
+            Studying MPC and related control methods as a lower-level mechanism
+            for maintaining stability, constraint satisfaction, and safe vehicle
+            operation.
+          </p>
+
+        </div>
+
+
+        <!-- Digital Twin -->
+        <div class="rounded-xl border border-slate-200 bg-white p-6">
+
+          <p class="text-xs font-semibold uppercase tracking-wider text-sky-600">
+            03 · Validation Layer
+          </p>
+
+          <h3 class="mt-2 text-lg font-semibold text-slate-900">
+            Digital Twin
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-slate-600">
+            Investigating how a digital-twin representation can be used to
+            evaluate proposed actions and estimate potentially unsafe
+            situations before commands are applied to the physical system.
+          </p>
+
+        </div>
+
+
+        <!-- Safety -->
+        <div class="rounded-xl border border-slate-200 bg-white p-6">
+
+          <p class="text-xs font-semibold uppercase tracking-wider text-emerald-600">
+            04 · Safety Mechanism
+          </p>
+
+          <h3 class="mt-2 text-lg font-semibold text-slate-900">
+            Safe Decision Making
+          </h3>
+
+          <p class="mt-3 text-sm leading-6 text-slate-600">
+            Exploring mechanisms that allow the architecture to fall back to
+            model-based control when a learned action is predicted to violate
+            safety constraints or increase collision risk.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Bottom CTA -->
+    <section class="text-center py-4">
+
+      <h2 class="text-2xl font-bold text-slate-900">
+        Interested in research or collaboration?
+      </h2>
+
+      <p class="mt-3 text-slate-600">
+        Feel free to get in touch for academic discussions and research opportunities.
+      </p>
+
+      <a
+        href="/contact"
+        class="inline-flex mt-5 rounded-lg bg-indigo-600 px-5 py-3 text-sm
+               font-medium text-white hover:bg-indigo-700 transition-colors"
+      >
+        Get in Touch
+      </a>
+
+    </section>
+
+  </div>
 </BaseLayout>

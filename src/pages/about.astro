@@ -3,35 +3,66 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="About Me | Robotics Researcher" description="Biography and research interests.">
-  <div class="max-w-3xl space-y-8">
-    <section class="space-y-4">
-      <h1 class="text-3xl font-bold tracking-tight text-slate-900">About Me</h1>
-      <p class="text-lg leading-8 text-slate-600">
-        I am a robotics researcher focused on state estimation, sensor fusion, and autonomous systems. 
-        My work involves developing robust localization algorithms and integrating diverse sensor suites 
-        to enable precise navigation in challenging environments.
-      </p>
+  <div class="max-w-3xl space-y-10">
+
+    <!-- Header + Photo -->
+    <section class="grid grid-cols-1 gap-6 md:grid-cols-[160px_1fr] md:items-center">
+      <div class="flex md:block justify-center">
+        <div class="h-36 w-36 md:h-40 md:w-40 rounded-full overflow-hidden ring-2 ring-slate-200 shadow-sm bg-slate-100">
+          <img
+            src="/images/profile.jpg"
+            alt="Portrait of the author"
+            class="h-full w-full object-cover"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        <h1 class="text-3xl font-bold tracking-tight text-slate-900">About Me</h1>
+        <p class="text-lg leading-8 text-slate-600">
+         My background is in electrical and control engineering, and my
+          interests have gradually expanded toward robotics and intelligent
+          autonomous systems. I am particularly interested in how classical
+          control, mathematical modeling, machine learning, and real-time
+          decision-making can work together to build safer and more capable
+          autonomous platforms.
+        </p>
+      </div>
     </section>
 
+    <!-- Research Interests -->
     <section class="space-y-4">
       <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Research Interests</h2>
       <ul class="list-disc pl-5 space-y-2 text-slate-600">
-        <li>Multi-sensor fusion (GPS/IMU/Visual Odometry) using Extended Kalman Filtering (EKF).</li>
-        <li>Trajectory estimation and SLAM (Simultaneous Localization and Mapping).</li>
-        <li>Stereo vision geometry and correspondence/block matching algorithms.</li>
-        <li>CMOS Analog Circuit Design for low-power sensor interfaces.</li>
+        <li>Robotics </li>
+        <li>Autonomous Systems  </li>
+        <li>Intelligent Control </li>
+        <li>UAVs and UGVs </li>
       </ul>
     </section>
 
+    <!-- Education -->
     <section class="space-y-4">
       <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Education</h2>
-      <div class="border-l-2 border-slate-200 pl-4 space-y-4">
-        <div>
-          <h3 class="font-semibold text-slate-900">M.Sc. / Research Path in Robotics & Computer Engineering</h3>
-          <p class="text-sm text-slate-500">Current Studies</p>
+
+      <div class="border-l-2 border-slate-200 pl-5 space-y-6">
+        <div class="space-y-1">
+          <h3 class="text-lg font-semibold text-slate-900">Amir Kabir University of Technology, Tehran, Iran</h3>
+          <p class="text-slate-700">B.Sc. in Electrical Engineering – Control Systems and Intelligence</p>
+          <p class="text-sm text-slate-500">Expected Graduation: January 2027</p>
+        </div>
+
+        <div class="space-y-1">
+          <h3 class="text-lg font-semibold text-slate-900">
+            National Organization for Development of Exceptional Talents (Sampad), Tehran, Iran
+          </h3>
+          <p class="text-slate-700">High School Diploma, Theoretical and Mathematical Physics</p>
+          <p class="text-sm text-slate-500">2016–2022</p>
         </div>
       </div>
     </section>
+
   </div>
 </BaseLayout>
-

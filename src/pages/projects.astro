@@ -1,40 +1,143 @@
 ---
+// src/pages/projects.astro
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const projects = [
+  {
+    title: "Hybrid Data-Model-Knowledge Architecture for Platooning (Bachelor Thesis)",
+    description: "Design and verification of a multi-layer supervisor control architecture combining Reinforcement Learning safety filtering and High-Fidelity Digital Twin dynamics.",
+    image: "/images/projects/platooning.jpg",
+    year: "2026",
+    status: "In Progress",
+    statusColor: "bg-amber-100 text-amber-800 border-amber-200",
+    tags: ["MATLAB", "Simulink", "Reinforcement Learning", "Digital Twin", "Control Theory"],
+    slug: "platooning-architecture"
+  },
+  {
+    title: "LiDAR-Based Localization & Environment Recognition for an Autonomous Aerial Vehicle",
+    description: "Development of a multi-sensor localization and environment recognition pipeline for a simulated aerial vehicle, integrating LiDAR, camera, and IMU data for 6-DoF pose estimation, trajectory evaluation, and 3D object localization.",
+    image: "/images/projects/aav.jpg",
+    year: "2026",
+    status: "Completed",
+    statusColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
+    tags: [
+      "Python",
+      "LiDAR",
+      "Visual Odometry",
+      "ICP",
+      "EKF",
+      "Sensor Fusion",
+      "YOLO-World"
+    ],
+    slug: "aav-localization"
+  },
+  {
+    title: "Green House Automation System",
+    description: "An automated greenhouse environmental monitoring and control system utilizing distributed sensors, actuators, and an embedded control unit.",
+    image: "/images/projects/greenhouse.jpg",
+    year: "2025",
+    status: "Completed",
+    statusColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
+    tags: ["Embedded C", "Sensors", "Microcontrollers", "IoT"],
+    slug: "greenhouse-automation"
+  },
+  {
+    title: "Collaborative Maze Navigation with e-puck Robots",
+    description: "Implementation and evaluation of a two-dimensional Simultaneous Localization and Mapping algorithm for differential drive robots within Webots simulator.",
+    image: "/images/projects/slam.png",
+    year: "2025",
+    status: "Completed",
+    statusColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
+    tags: ["Webots", "SLAM", "Lidar", "Python"],
+    slug: "2d-slam-webots"
+  },
+  {
+    title: "PLC Systems and Control Projects",
+    description: "Design and implementation of industrial automation loops, safety logic, and sequential processes across various PLC controllers.",
+    image: "/images/projects/plc.jpg",
+    year: "2025",
+    status: "Completed",
+    statusColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
+    tags: ["PLC", "LADDER", "HMI", "Industrial Automation"],
+    slug: "plc-systems"
+  },
+  {
+    title: "Sports Performance Analysis Device",
+    description: "Hardware prototype and signal processing pipelines using IMU sensors to track, classify, and analyze physical motions and athletic performance metrics.",
+    image: "/images/projects/sports.jpg",
+    year: "2022",
+    status: "Completed",
+    statusColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
+    tags: ["IMU Sensors", "Android Studio", "PCB Design", "Arduino"],
+    slug: "sports-performance-device"
+  }
+];
 ---
 
-<BaseLayout title="Projects | Robotics Researcher" description="Robotics and embedded systems projects.">
-  <div class="max-w-4xl space-y-8">
-    <h1 class="text-3xl font-bold tracking-tight text-slate-900">Projects</h1>
-    
-    <div class="grid gap-6 md:grid-cols-2">
-      <!-- Project 1 -->
-      <div class="border border-slate-200 bg-white rounded-lg overflow-hidden flex flex-col justify-between p-6">
-        <div>
-          <h2 class="text-xl font-bold text-slate-900 mb-2">EKF-Based GPS/IMU Fusion</h2>
-          <p class="text-slate-600 text-sm mb-4">
-            Implementation of an Extended Kalman Filter in MATLAB/Simulink for fusing IMU data with intermittent GPS updates.
-          </p>
-        </div>
-        <div class="flex gap-2">
-          <span class="text-xs px-2 py-1 bg-slate-100 rounded text-slate-600">MATLAB</span>
-          <span class="text-xs px-2 py-1 bg-slate-100 rounded text-slate-600">EKF</span>
-          <span class="text-xs px-2 py-1 bg-slate-100 rounded text-slate-600">Sensor Fusion</span>
-        </div>
-      </div>
+<BaseLayout
+  title="Projects | Robotics Researcher"
+  description="Robotics and embedded systems projects."
+>
+  <div class="max-w-5xl mx-auto space-y-8 py-4">
+    <div class="border-b border-slate-200 pb-4">
+      <h1 class="text-3xl font-bold tracking-tight text-slate-900">
+        Projects
+      </h1>
 
-      <!-- Project 2 -->
-      <div class="border border-slate-200 bg-white rounded-lg overflow-hidden flex flex-col justify-between p-6">
-        <div>
-          <h2 class="text-xl font-bold text-slate-900 mb-2">CMOS Analog Circuit Design</h2>
-          <p class="text-slate-600 text-sm mb-4">
-            HSPICE simulation of high-performance CMOS operational amplifiers optimized for robotic sensor interfaces.
-          </p>
-        </div>
-        <div class="flex gap-2">
-          <span class="text-xs px-2 py-1 bg-slate-100 rounded text-slate-600">HSPICE</span>
-          <span class="text-xs px-2 py-1 bg-slate-100 rounded text-slate-600">Analog Design</span>
-        </div>
-      </div>
+      <p class="text-slate-500 mt-1 text-sm">
+        Academic and applied engineering projects in robotics, automation, and control systems.
+      </p>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-2">
+      {projects.map((project) => (
+        <a
+          href={`/projects/${project.slug}`}
+          class="group border border-slate-200 bg-white rounded-xl overflow-hidden flex flex-col justify-between shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-slate-300"
+          aria-label={`View details for ${project.title}`}
+        >
+          <div>
+            <div class="relative h-48 w-full overflow-hidden bg-slate-100 border-b border-slate-100">
+              <img
+                src={project.image}
+                alt={project.title}
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full border border-slate-200">
+                  {project.year}
+                </span>
+
+                <span
+                  class={"text-xs font-semibold px-2 py-0.5 rounded-full border " + project.statusColor}
+                >
+                  {project.status}
+                </span>
+              </div>
+
+              <h2 class="text-xl font-bold text-slate-900 mb-2 leading-snug group-hover:text-indigo-600 transition-colors duration-200">
+                {project.title}
+              </h2>
+
+              <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                {project.description}
+              </p>
+            </div>
+          </div>
+
+          <div class="px-6 pb-6 pt-0 flex flex-wrap gap-1.5">
+            {project.tags.map((tag) => (
+              <span class="text-xs px-2.5 py-1 bg-slate-50 border border-slate-100 rounded-md text-slate-600 font-medium">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </a>
+      ))}
     </div>
   </div>
 </BaseLayout>
