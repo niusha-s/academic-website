@@ -10,43 +10,214 @@ const imuFormula = `$$q_{new} = q_{old} \\otimes \\Delta q$$`;
     <header class="mb-8 border-b pb-6">
       <h1 class="text-4xl font-extrabold text-slate-900 mb-4">{projectTitle}</h1>
       <div class="flex gap-2">
-        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">Wearable Tech</span>
-        <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium">2022</span>
+        <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-medium">
+          Wearable Tech
+        </span>
+        <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium">
+          2022
+        </span>
       </div>
     </header>
+   <!-- PROJECT OVERVIEW -->
+    <section class="mb-12">
+      <div class="border-l-4 border-gray-300 pl-6 py-1">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Project Overview</h2>
+
+        <div class="prose prose-slate max-w-none">
+          <p>
+            This project focuses on the design and development of a wearable device
+            for sports performance monitoring and motion analysis. The system
+            analyzes limb movements during exercise to detect incorrect movement
+            patterns and provide real-time feedback, helping users improve their
+            technique and reduce the risk of injury.
+          </p>
+
+          <p>
+            The device measures performance parameters including completed sets,
+            movement speed, errors, and joint range of motion, enabling users to
+            monitor their performance over time. The system also explores the use
+            of range-of-motion measurements as a supplementary tool for the
+            assessment of sports-related injuries.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- DOCUMENTATION SHORTCUT -->
+    <div class="mb-10 flex justify-end">
+      <a
+        href="#documentation"
+        class="inline-flex items-center gap-2 px-4 py-2
+              bg-slate-50 hover:bg-slate-100
+              border border-slate-200
+              text-slate-700 font-medium text-sm
+              rounded-lg transition-colors"
+      >
+        View Project Reports →
+      </a>
+    </div>
 
     <div class="prose prose-slate max-w-none">
-            <!-- Hardware & Signal Demo (Multi-element Layout) -->
+
+      <!-- Hardware & Signal Demo -->
       <section class="mb-10">
         <h2 class="text-2xl font-bold mb-4">Hardware & Signal Demo</h2>
         
         <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
           
-          <!-- Column for the two pictures -->
+          <!-- Images -->
           <div class="flex flex-col gap-4 md:w-1/3 lg:w-1/4">
             <img 
               src="/images/projects/sports.jpg" 
-              alt="Description of picture 1" 
+              alt="Sports performance analysis device" 
               class="rounded-lg shadow-md border border-slate-200 w-full h-auto"
               loading="lazy"
             />
             <img 
               src="/images/projects/sports2.jpg" 
-              alt="Description of picture 2" 
+              alt="Electronic hardware of the sports performance analysis device" 
               class="rounded-lg shadow-md border border-slate-200 w-full h-auto"
               loading="lazy"
             />
           </div>
           
-          <!-- GIF on the right -->
-          <div class="flex-1 flex justify-center">
-            <div class="aspect-[9/17.25] w-56 rounded-[1.1rem] overflow-hidden border border-slate-200 shadow-md bg-slate-950">
-              <img 
-                src="/gifs/sports-demo.gif" 
-                alt="Hardware and signal demonstration" 
-                class="w-full h-full object-cover"
-                loading="lazy"
-              />
+         <!-- GIF / Smartphone -->
+<div class="flex-1 flex justify-center">
+  <div class="relative w-48 aspect-[10/20.5] rounded-[2.2rem] bg-slate-900 p-[5px] shadow-2xl border border-slate-700">
+
+    <!-- Side buttons -->
+    <div class="absolute -right-[3px] top-24 w-[3px] h-12 rounded-r-sm bg-slate-700"></div>
+    <div class="absolute -left-[3px] top-20 w-[3px] h-7 rounded-l-sm bg-slate-700"></div>
+    <div class="absolute -left-[3px] top-29 w-[3px] h-7 rounded-l-sm bg-slate-700"></div>
+
+    <!-- Screen -->
+    <div class="relative w-full h-full rounded-[1.9rem] overflow-hidden bg-black">
+
+      <img 
+        src="/gifs/sports-demo.gif" 
+        alt="Hardware and signal demonstration"
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+
+      <!-- Dynamic-island / camera -->
+      <div class="absolute top-2 left-1/2 -translate-x-1/2 w-16 h-5 rounded-full bg-black"></div>
+
+    </div>
+
+  </div>
+</div>
+
+        </div>
+      </section>
+
+      
+
+
+<!-- Key Contributions -->
+<section class="mb-10">
+  <h2 class="text-2xl font-bold mb-4">Key Contributions</h2>
+
+  <ol class="space-y-2.5 list-decimal list-inside text-slate-700">
+    <li>Wearable IMU-based motion sensing</li>
+    <li>Real-time movement and error detection</li>
+    <li>Range-of-motion and angular-velocity measurement</li>
+    <li>Signal filtering and hysteresis-based decision logic</li>
+    <li>Bluetooth communication between embedded hardware and Android</li>
+    <li>Custom PCB design and hardware integration</li>
+    <li>Android application for real-time performance monitoring</li>
+    <li>Audible and visual feedback for movement correction</li>
+  </ol>
+</section>
+
+
+
+      <!-- Technologies -->
+      <section class="mb-10">
+        <h2 class="text-2xl font-bold mb-4">Technologies</h2>
+
+        <div class="grid md:grid-cols-2 gap-3">
+
+          <!-- Hardware -->
+          <div class="px-4 py-3 rounded-lg border border-slate-200 bg-white shadow-sm">
+            <h3 class="text-sm font-semibold text-slate-800 mb-2">Hardware</h3>
+
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium">
+                Arduino Nano
+              </span>
+              <span class="px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium">
+                MPU6050 IMU
+              </span>
+              <span class="px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium">
+                HC-05 Bluetooth
+              </span>
+              <span class="px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium">
+                Custom PCB
+              </span>
+              <span class="px-2.5 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-medium">
+                Buzzer
+              </span>
+            </div>
+          </div>
+
+          <!-- Software -->
+          <div class="px-4 py-3 rounded-lg border border-slate-200 bg-white shadow-sm">
+            <h3 class="text-sm font-semibold text-slate-800 mb-2">Software & Tools</h3>
+
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-medium">
+                C++
+              </span>
+              <span class="px-2.5 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-medium">
+                Java
+              </span>
+              <span class="px-2.5 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-medium">
+                Android Studio
+              </span>
+              <span class="px-2.5 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-medium">
+                Arduino IDE
+              </span>
+              <span class="px-2.5 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-medium">
+                Altium Designer
+              </span>
+            </div>
+          </div>
+
+          <!-- Communication -->
+          <div class="px-4 py-3 rounded-lg border border-slate-200 bg-white shadow-sm">
+            <h3 class="text-sm font-semibold text-slate-800 mb-2">Communication</h3>
+
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-medium">
+                I²C
+              </span>
+              <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-medium">
+                UART
+              </span>
+              <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-medium">
+                Bluetooth
+              </span>
+            </div>
+          </div>
+
+          <!-- Methods -->
+          <div class="px-4 py-3 rounded-lg border border-slate-200 bg-white shadow-sm">
+            <h3 class="text-sm font-semibold text-slate-800 mb-2">Methods</h3>
+
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-medium">
+                Motion Sensing
+              </span>
+              <span class="px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-medium">
+                ROM Analysis
+              </span>
+              <span class="px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-medium">
+                Moving Average Filter
+              </span>
+              <span class="px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 text-xs font-medium">
+                Hysteresis
+              </span>
+              
             </div>
           </div>
 
@@ -54,44 +225,65 @@ const imuFormula = `$$q_{new} = q_{old} \\otimes \\Delta q$$`;
       </section>
 
 
-
-
-      <section class="mb-10">
-        <h2 class="text-2xl font-bold mb-4">Motion Tracking</h2>
-        <p class="text-slate-700 leading-relaxed">
-          Development of a hardware prototype using IMU sensors to capture high-frequency motion data 
-          for analyzing athlete biomechanics.
-        </p>
-      </section>
-
-      <section class="mb-10">
-        <h2 class="text-2xl font-bold mb-4">Orientation Estimation</h2>
-        <div class="bg-slate-50 p-6 rounded-lg border border-slate-100 flex justify-center my-6">
-          <div class="text-lg italic text-slate-800" set:html={imuFormula} />
-        </div>
-      </section>
-
-      <!-- گزارش‌کار پروژه -->
-      <section class="mb-10 border-t pt-8">
+      <!-- Project Documentation -->
+      <section id="documentation" class="mb-10 border-t pt-8">
         <h2 class="text-2xl font-bold mb-4">Project Documentation</h2>
-        <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <div>
-            <h3 class="text-lg font-semibold text-slate-800">Design Report</h3>
-            <p class="text-sm text-slate-500">PCB layouts, sensor calibration procedures, and firmware codes.</p>
+
+        <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold text-slate-800">
+                Design Reports
+              </h3>
+
+              <p class="mt-1 text-sm text-slate-500 leading-relaxed">
+                Project documentation, including a research report on wearable inertial 
+                sensing for human motion analysis and sports-performance monitoring.
+
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-2.5 sm:w-40">
+
+              <a
+                href="/files/reports/sports-report-en.pdf"
+                download
+                class="inline-flex items-center justify-center px-4 py-2.5 bg-indigo-700 hover:bg-indigo-800 text-white font-medium rounded-lg transition-colors text-sm shadow-sm"
+              >
+                English Report
+              </a>
+
+              <a
+                href="/files/reports/sports-report-fa.pdf"
+                download
+                class="inline-flex items-center justify-center px-4 py-2.5 bg-indigo-700 hover:bg-slate-100 text-white font-medium rounded-lg transition-colors text-sm border border-slate-200"
+              >
+                Persian Report
+              </a>
+
+            </div>
           </div>
-          <a 
-            href="/files/reports/sports-report.pdf" 
-            download
-            class="inline-flex items-center justify-center px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-colors text-sm shadow-sm"
-          >
-            Download PDF Report
-          </a>
+
+          <div class="mt-5 pt-4 border-t border-slate-200">
+            <p class="text-xs leading-5 text-slate-500">
+              <span class="font-medium text-slate-600">Note:</span>
+              The original report was written in Persian.
+              The English version was produced through AI-assisted translation
+              and may not exactly preserve the wording of the original.
+            </p>
+          </div>
+
         </div>
       </section>
+
     </div>
 
     <footer class="mt-12 pt-6 border-t">
-      <a href="/projects" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center gap-2">
+      <a
+        href="/projects"
+        class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center gap-2"
+      >
         ← Back to Projects
       </a>
     </footer>

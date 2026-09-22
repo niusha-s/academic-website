@@ -14,51 +14,102 @@ const slamFormula = `$$z_t = h(x_t, m) + v_t$$`;
         <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium">2025</span>
       </div>
     </header>
+    <!-- PROJECT OVERVIEW -->
+    <section class="mb-12">
+      <div class="border-l-4 border-gray-300 pl-6 py-1">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Project Overview</h2>
+
+        <div class="prose prose-slate max-w-none">
+          <p>
+            This project implements a LiDAR-based autonomous exploration and navigation
+             system in Webots. The robot incrementally builds a 2D occupancy grid from 
+             LiDAR measurements, using GPS and compass data for localization. The resulting map
+             is used for obstacle avoidance, exploration, and autonomous path planning.
+          </p>
+
+          
+        </div>
+      </div>
+    </section>
+    <!-- DOCUMENTATION SHORTCUT -->
+    <div class="mb-10 flex justify-end">
+      <a
+        href="#documentation"
+        class="inline-flex items-center gap-2 px-4 py-2
+              bg-slate-50 hover:bg-slate-100
+              border border-slate-200
+              text-slate-700 font-medium text-sm
+              rounded-lg transition-colors"
+      >
+        View Project Reports →
+      </a>
+    </div>
 
     <div class="prose prose-slate max-w-none">
-      <!-- ویدیو شبیه‌سازی -->
+     <!-- Simulation Demo -->
       <section class="mb-10">
         <h2 class="text-2xl font-bold mb-4">Simulation Run</h2>
-        <div class="aspect-video w-full rounded-xl overflow-hidden shadow-md border border-slate-200 bg-slate-950">
-          <video controls class="w-full h-full object-cover">
-            <source src="/videos/slam-demo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+
+        <div class="max-w-2xl mx-auto aspect-video rounded-xl overflow-hidden shadow-md border border-slate-200">
+          <iframe
+            class="w-full h-full"
+            src="https://www.youtube.com/embed/2ku_0QP-7qI"
+            title="2D SLAM and Path Planning Simulation"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
       </section>
 
       <section class="mb-10">
         <h2 class="text-2xl font-bold mb-4">Algorithm Implementation</h2>
         <p class="text-slate-700 leading-relaxed">
-          Implementation of Simultaneous Localization and Mapping using Lidar data in the Webots 
-          simulation environment.
+          LiDAR measurements are transformed into the global frame 
+          and used to update the occupancy grid, with Bresenham's algorithm 
+          applied to trace free space along each LiDAR ray. BFS and DFS are 
+          used for exploration and target selection, while BFS-based path 
+          planning generates collision-free routes through known free space.
+          A PID controller regulates the robot's heading and forward motion,
+          with replanning and stuck/dead-end detection providing recovery
+          during navigation.
         </p>
       </section>
 
-      <section class="mb-10">
-        <h2 class="text-2xl font-bold mb-4">Observation Model</h2>
-        <div class="bg-slate-50 p-6 rounded-lg border border-slate-100 flex justify-center my-6">
-          <div class="text-lg italic text-slate-800" set:html={slamFormula} />
-        </div>
-      </section>
+      
 
-      <!-- گزارش‌کار پروژه -->
-      <section class="mb-10 border-t pt-8">
-        <h2 class="text-2xl font-bold mb-4">Project Documentation</h2>
-        <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-          <div>
-            <h3 class="text-lg font-semibold text-slate-800">SLAM Report</h3>
-            <p class="text-sm text-slate-500">Mapping accuracy analysis and path planning algorithm verification.</p>
-          </div>
-          <a 
-            href="/files/reports/report_2d.pdf" 
-            download
-            class="inline-flex items-center justify-center px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-colors text-sm shadow-sm"
-          >
-            Download PDF Report
-          </a>
-        </div>
-      </section>
+      <!-- Project Documentation -->
+<section id="documentation" class="mb-10 border-t pt-8">
+  <h2 class="text-2xl font-bold mb-4">Project Documentation</h2>
+
+  <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+    <div>
+      <h3 class="text-lg font-semibold text-slate-800">SLAM Report</h3>
+      <p class="text-sm text-slate-500">
+        Mapping accuracy analysis and path planning algorithm verification.
+      </p>
+    </div>
+
+    <div class="flex flex-wrap gap-3">
+      <a 
+        href="/files/reports/report_2d.pdf" 
+        download
+        class="inline-flex items-center justify-center px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-colors text-sm shadow-sm"
+      >
+        Download PDF Report
+      </a>
+
+      <a 
+        href="https://github.com/niusha-s/webots-2d-slam"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center px-5 py-3 bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 font-medium rounded-lg transition-colors text-sm"
+      >
+        View Source Code
+      </a>
+    </div>
+  </div>
+</section>
     </div>
 
     <footer class="mt-12 pt-6 border-t">

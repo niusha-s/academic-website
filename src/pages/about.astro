@@ -22,26 +22,115 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="space-y-3">
         <h1 class="text-3xl font-bold tracking-tight text-slate-900">About Me</h1>
         <p class="text-lg leading-8 text-slate-600">
-         My background is in electrical and control engineering, and my
-          interests have gradually expanded toward robotics and intelligent
-          autonomous systems. I am particularly interested in how classical
-          control, mathematical modeling, machine learning, and real-time
-          decision-making can work together to build safer and more capable
-          autonomous platforms.
+         Control engineer by training, teaching robotics alongside my studies. My current interest is safety-critical control — 
+         figuring out where machine learning actually earns a place in systems that can't afford to fail.
+         I spend most of my time somewhere between classical control theory and the messier, more uncertain world of autonomous robots 
+         — and I like explaining that gap to students almost as much as I like working in it.
         </p>
       </div>
     </section>
 
-    <!-- Research Interests -->
-    <section class="space-y-4">
-      <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Research Interests</h2>
-      <ul class="list-disc pl-5 space-y-2 text-slate-600">
-        <li>Robotics </li>
-        <li>Autonomous Systems  </li>
-        <li>Intelligent Control </li>
-        <li>UAVs and UGVs </li>
-      </ul>
-    </section>
+<!-- Research Interests + Teaching -->
+<section class="grid gap-8 md:grid-cols-[1fr_0.85fr] md:items-start">
+
+  <!-- Research Interests -->
+  <div class="space-y-4">
+    <h2 class="text-2xl font-semibold tracking-tight text-slate-900">
+      Research Interests
+    </h2>
+
+    <ul class="list-disc pl-5 space-y-2 text-slate-600">
+      <li>Robotics</li>
+      <li>Autonomous Vehicles and Systems</li>
+      <li>Intelligent and Learning-Based Control</li>
+      <li>Multi-Agent / Cooperative Control</li>
+      <li>Vehicle platooning</li>
+      <li>UAVs and UGVs</li>
+    </ul>
+  </div>
+
+  <!-- Teaching -->
+  <div class="rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white px-4 py-3.5 shadow-sm">
+
+    <div class="mb-2.5">
+      <h2 class="text-xl font-semibold tracking-tight text-slate-900">
+        Teaching
+      </h2>
+    </div>
+
+    <div class="space-y-3">
+
+      <!-- Middle School -->
+      <div>
+        <div class="mb-1.5 flex items-baseline gap-2">
+          <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-500">
+            Middle School
+          </h3>
+
+          <span class="text-xs text-slate-400">
+            Robotics Instructor · 3 yrs
+          </span>
+        </div>
+
+        <div class="flex flex-wrap gap-1.5">
+          <span class="rounded-full bg-blue-50 px-2.5 py-1 text-xs font-medium text-gray-900">
+            Python
+          </span>
+          <span class="rounded-full bg-violet-50 px-2.5 py-1 text-xs font-medium text-violet-900">
+            C++
+          </span>
+          <span class="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-900">
+            Webots
+          </span>
+          <span class="rounded-full bg-amber-50 px-2.5 py-1 text-xs font-medium text-amber-900">
+            Path Planning
+          </span>
+          <span class="rounded-full bg-rose-50 px-2.5 py-1 text-xs font-medium text-rose-900">
+            Search Algorithms
+          </span>
+          <span class="rounded-full bg-cyan-50 px-2.5 py-1 text-xs font-medium text-cyan-900">
+            Electronics
+          </span>
+          <span class="rounded-full bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-900">
+            PCB Design
+          </span>
+        </div>
+      </div>
+
+      <!-- High School -->
+      <div class="border-t border-slate-200 pt-3">
+
+        <div class="mb-1.5 flex items-baseline gap-2">
+          <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-500">
+            High School
+          </h3>
+
+          <span class="text-xs text-slate-400">
+            Mechatronics Instructor · 1 yr
+          </span>
+        </div>
+
+        <div class="flex flex-wrap gap-1.5">
+          <span class="rounded-full bg-fuchsia-50 px-2.5 py-1 text-xs font-medium text-fuchsia-900">
+            Mechatronics
+          </span>
+          <span class="rounded-full bg-orange-50 px-2.5 py-1 text-xs font-medium text-orange-900">
+            Research Projects
+          </span>
+          <span class="rounded-full bg-teal-50 px-2.5 py-1 text-xs font-medium text-teal-900">
+            Project Design
+          </span>
+          <span class="rounded-full bg-sky-50 px-2.5 py-1 text-xs font-medium text-sky-900">
+            Problem Solving
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</section>
 
     <!-- Education -->
     <section class="space-y-4">

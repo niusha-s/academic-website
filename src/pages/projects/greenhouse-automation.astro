@@ -13,7 +13,44 @@ const projectTitle = "Green House Automation System";
         <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium">2025</span>
       </div>
     </header>
+    <!-- PROJECT OVERVIEW -->
+  <section class="mb-12">
+    <div class="border-l-4 border-gray-300 pl-6 py-1">
+      <h2 class="text-2xl font-bold text-slate-900 mb-4">Project Overview</h2>
 
+      <div class="prose prose-slate max-w-none">
+        <p>
+          This project focuses on the design and implementation of an automated
+          greenhouse system for monitoring and controlling environmental
+          conditions. The system continuously measures parameters such as
+          temperature, humidity, and soil moisture to maintain suitable growing
+          conditions for plants.
+        </p>
+
+        <p>
+          Based on the sensor measurements, the control system automatically
+          operates the corresponding actuators to regulate the greenhouse
+          environment. The project demonstrates the integration of sensors,
+          embedded control, and actuators in an automated agricultural application.
+        </p>
+      </div>
+    </div>
+
+    <!-- DOCUMENTATION SHORTCUT -->
+<div class="mb-10 flex justify-end">
+  <a
+    href="#documentation"
+    class="inline-flex items-center gap-2 px-4 py-2
+           bg-slate-50 hover:bg-slate-100
+           border border-slate-200
+           text-slate-700 font-medium text-sm
+           rounded-lg transition-colors"
+  >
+    View Project Reports →
+  </a>
+</div>
+
+  </section>
     <div class="prose prose-slate max-w-none">
       <!-- Hardware Demonstration Video -->
       <section class="mb-10">
@@ -26,29 +63,24 @@ const projectTitle = "Green House Automation System";
         </div>
       </section>
 
-      <section class="mb-10">
-        <h2 class="text-2xl font-bold mb-4">Overview</h2>
-        <p class="text-slate-700 leading-relaxed">
-          An automated system designed to monitor and control environmental parameters such as temperature, 
-          humidity, and soil moisture to optimize plant growth conditions.
-        </p>
-      </section>
+      
 
       <!-- System Architecture Image -->
-      <section class="mb-10">
-        <h2 class="text-2xl font-bold mb-4">System Architecture</h2>
-        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 flex flex-col items-center justify-center my-6">
-          <img 
-            src="/images/projects/greenhouse-architecture.png" 
-            alt="Greenhouse Automation System Architecture Diagram" 
-            class="w-full h-auto max-h-[500px] object-contain rounded-lg shadow-sm"
-            loading="lazy"
-          />
-        </div>
-      </section>
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold mb-4">System Architecture</h2>
+
+      <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 flex items-center justify-center my-6">
+        <img
+          src="/images/projects/greenhouse-architecture.jpg"
+          alt="Greenhouse Automation System Architecture Diagram"
+          class="w-full max-w-2xl h-auto object-contain rounded-lg shadow-sm"
+          loading="lazy"
+        />
+      </div>
+    </section>
 
       <!-- Project Documentation -->
-      <section class="mb-10 border-t pt-8">
+      <section id="documentation" class="mb-10 border-t pt-8">
         <h2 class="text-2xl font-bold mb-4">Project Documentation</h2>
         <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
