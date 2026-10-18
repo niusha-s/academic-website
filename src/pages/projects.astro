@@ -1,5 +1,4 @@
 ---
-// src/pages/projects.astro
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const projects = [
@@ -9,10 +8,10 @@ const projects = [
     image: "/images/projects/platooning.jpg",
     year: "2026",
     status: "In Progress",
-    statusColor: "bg-amber-100 text-amber-800 border-amber-200",
+    statusColor: "bg-amber-100 text-amber-800 border-amber-200 dark:bg-amber-900/30 dark:text-amber-300 dark:border-amber-800",
     type: "Research Project",
-    typeColor: "bg-indigo-50 text-indigo-700 border-indigo-200",
-    tags: ["MATLAB", "Simulink","Python","CARLA","Reinforcement Learning", "Digital Twin", "Control Theory"],
+    typeColor: "bg-indigo-50 text-indigo-700 border-indigo-200 dark:bg-indigo-900/30 dark:text-indigo-300 dark:border-indigo-800",
+    tags: ["MATLAB", "Simulink", "Python", "CARLA", "Reinforcement Learning", "Digital Twin", "Control Theory"],
     slug: "platooning-architecture"
   },
   {
@@ -21,16 +20,8 @@ const projects = [
     image: "/images/projects/aav.jpg",
     year: "2026",
     status: "Completed",
-    statusColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
-    tags: [
-      "Python",
-      "LiDAR",
-      "Visual Odometry",
-      "ICP",
-      "EKF",
-      "Sensor Fusion",
-      "YOLO-World"
-    ],
+    statusColor: "bg-emerald-100 text-emerald-800 border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-300 dark:border-emerald-800",
+    tags: ["Python", "LiDAR", "Visual Odometry", "ICP", "EKF", "Sensor Fusion", "YOLO-World"],
     slug: "aav-localization"
   },
   {
@@ -39,7 +30,7 @@ const projects = [
     image: "/images/projects/greenhouse.jpg",
     year: "2025",
     status: "Completed",
-    statusColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
+    statusColor: "bg-emerald-100 text-emerald-800 border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-300 dark:border-emerald-800",
     tags: ["Embedded C", "Sensors", "Microcontrollers", "IoT"],
     slug: "greenhouse-automation"
   },
@@ -49,8 +40,8 @@ const projects = [
     image: "/images/projects/slam.png",
     year: "2025",
     status: "Completed",
-    statusColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
-    tags: ["Webots", "Sensor fusion", "Lidar", "Python"],
+    statusColor: "bg-emerald-100 text-emerald-800 border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-300 dark:border-emerald-800",
+    tags: ["Webots", "Sensor Fusion", "LiDAR", "Python"],
     slug: "2d-slam-webots"
   },
   {
@@ -59,7 +50,7 @@ const projects = [
     image: "/images/projects/plc.jpg",
     year: "2025",
     status: "Completed",
-    statusColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
+    statusColor: "bg-emerald-100 text-emerald-800 border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-300 dark:border-emerald-800",
     tags: ["PLC", "LADDER", "HMI", "Industrial Automation"],
     slug: "plc-systems"
   },
@@ -69,7 +60,7 @@ const projects = [
     image: "/images/projects/sports.jpg",
     year: "2022",
     status: "Completed",
-    statusColor: "bg-emerald-100 text-emerald-800 border-emerald-200",
+    statusColor: "bg-emerald-100 text-emerald-800 border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-300 dark:border-emerald-800",
     tags: ["IMU Sensors", "Android Studio", "PCB Design", "Arduino"],
     slug: "sports-performance-device"
   }
@@ -81,12 +72,12 @@ const projects = [
   description="Robotics and embedded systems projects."
 >
   <div class="max-w-5xl mx-auto space-y-8 py-4">
-    <div class="border-b border-slate-200 pb-4">
-      <h1 class="text-3xl font-bold tracking-tight text-slate-900">
+    <div class="border-b border-slate-200 dark:border-slate-700 pb-4">
+      <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
         Projects
       </h1>
 
-      <p class="text-slate-500 mt-1 text-sm">
+      <p class="text-slate-500 dark:text-slate-400 mt-1 text-sm">
         Academic and applied engineering projects in robotics, automation, and control systems.
       </p>
     </div>
@@ -95,11 +86,11 @@ const projects = [
       {projects.map((project) => (
         <a
           href={`/projects/${project.slug}`}
-          class="group border border-slate-200 bg-white rounded-xl overflow-hidden flex flex-col justify-between shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-slate-300"
+          class="group border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 rounded-xl overflow-hidden flex flex-col justify-between shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-slate-300 dark:hover:border-slate-500"
           aria-label={`View details for ${project.title}`}
         >
           <div>
-            <div class="relative h-48 w-full overflow-hidden bg-slate-100 border-b border-slate-100">
+            <div class="relative h-48 w-full overflow-hidden bg-slate-100 dark:bg-slate-800 border-b border-slate-100 dark:border-slate-700">
               <img
                 src={project.image}
                 alt={project.title}
@@ -110,7 +101,7 @@ const projects = [
 
             <div class="p-6">
               <div class="flex flex-wrap items-center gap-2 mb-3">
-                <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full border border-slate-200">
+                <span class="text-xs font-semibold text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-full border border-slate-200 dark:border-slate-700">
                   {project.year}
                 </span>
 
@@ -129,11 +120,11 @@ const projects = [
                 </span>
               </div>
 
-              <h2 class="text-xl font-bold text-slate-900 mb-2 leading-snug group-hover:text-indigo-600 transition-colors duration-200">
+              <h2 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 leading-snug group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-200">
                 {project.title}
               </h2>
 
-              <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
                 {project.description}
               </p>
             </div>
@@ -141,7 +132,7 @@ const projects = [
 
           <div class="px-6 pb-6 pt-0 flex flex-wrap gap-1.5">
             {project.tags.map((tag) => (
-              <span class="text-xs px-2.5 py-1 bg-slate-50 border border-slate-100 rounded-md text-slate-600 font-medium">
+              <span class="text-xs px-2.5 py-1 bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-md text-slate-600 dark:text-slate-300 font-medium">
                 {tag}
               </span>
             ))}

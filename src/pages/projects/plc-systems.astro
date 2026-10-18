@@ -5,64 +5,69 @@ const projectTitle = "PLC and Industrial Automation Projects";
 ---
 
 <BaseLayout title={projectTitle}>
-  <article class="max-w-4xl mx-auto py-10 px-4">
-    
-    <header class="mb-8 border-b pb-6">
-      <h1 class="text-4xl font-extrabold text-slate-900 mb-4">
+  <article class="mx-auto max-w-4xl px-4 py-10">
+
+    <!-- HEADER -->
+    <header class="mb-8 border-b border-slate-200 pb-6 dark:border-slate-700">
+      <h1 class="mb-4 text-4xl font-extrabold text-slate-900 dark:text-slate-100">
         {projectTitle}
       </h1>
 
-      <div class="flex gap-2 flex-wrap">
-        <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-medium">
+      <div class="flex flex-wrap gap-2">
+        <span class="rounded-full bg-orange-100 px-3 py-1 text-sm font-medium text-orange-700 dark:bg-orange-950 dark:text-orange-300">
           Industrial Automation
         </span>
-        <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium">
+
+        <span class="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-300">
           2024
         </span>
       </div>
     </header>
 
-    <div class="prose prose-slate max-w-none space-y-12">
+    <div class="prose prose-slate max-w-none space-y-12 dark:prose-invert">
 
-      <!-- Project 1 -->
-      <section class="border-b pb-10">
-        <h2 class="text-3xl font-bold text-slate-800 mb-4">
+      <!-- PROJECT 1 -->
+      <section class="border-b border-slate-200 pb-10 dark:border-slate-700">
+        <h2 class="mb-4 text-3xl font-bold text-slate-800 dark:text-slate-100">
           Project 1: Multi-Belt Conveyor Synchronization System
         </h2>
 
-        <p class="text-slate-700 leading-relaxed mb-6">
+        <p class="mb-6 leading-relaxed text-slate-700 dark:text-slate-300">
           A PLC-based conveyor control system designed to coordinate the
           operation of multiple conveyor belts. The system manages the
           movement and synchronization of packages between conveyor sections
           to achieve smooth and coordinated material handling.
         </p>
 
-      <!-- Demo -->
-<div class="mb-6">
-  <h3 class="text-xl font-semibold mb-3">
-    Conveyor System Demo
-  </h3>
+        <!-- DEMONSTRATION VIDEO -->
+        <div class="mb-6">
+          <h3 class="mb-3 text-xl font-semibold text-slate-800 dark:text-slate-100">
+            Conveyor System Demo
+          </h3>
 
-  <div class="max-w-2xl mx-auto">
-    <div class="aspect-video w-full rounded-xl overflow-hidden shadow-md border border-slate-200">
-      <iframe
-        class="w-full h-full"
-        src="https://www.youtube.com/embed/tRmQyFONHvM"
-        title="Multi-Belt Conveyor Synchronization System Demo"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </div>
-  </div>
-</div>
+          <div class="mx-auto max-w-2xl">
+            <div class="aspect-video w-full overflow-hidden rounded-xl border border-slate-200 bg-slate-950 shadow-md dark:border-slate-700">
+              <iframe
+                class="h-full w-full"
+                src="https://www.youtube.com/embed/tRmQyFONHvM"
+                title="Multi-Belt Conveyor Synchronization System Demo"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
 
-        <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <!-- SOURCE CODE -->
+        <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-700 dark:bg-slate-900 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h4 class="text-lg font-semibold text-slate-800">
+            <h4 class="text-lg font-semibold text-slate-800 dark:text-slate-100">
               PLC Program
             </h4>
-            <p class="text-sm text-slate-500">
+
+            <p class="text-sm text-slate-500 dark:text-slate-400">
               PLC control code and implementation files for the conveyor system.
             </p>
           </div>
@@ -70,21 +75,20 @@ const projectTitle = "PLC and Industrial Automation Projects";
           <a
             href="/files/code/plc-conveyor-code.pdf"
             download
-            class="inline-flex items-center justify-center px-5 py-3 bg-orange-600 hover:bg-orange-700 text-white font-medium rounded-lg transition-colors text-sm shadow-sm"
+            class="inline-flex items-center justify-center rounded-lg bg-orange-600 px-5 py-3 text-sm font-medium text-white shadow-sm transition-colors hover:bg-orange-700 dark:bg-orange-500 dark:hover:bg-orange-400"
           >
             Download Source Code
           </a>
         </div>
       </section>
 
-
-      <!-- Project 2 -->
+      <!-- PROJECT 2 -->
       <section class="pb-10">
-        <h2 class="text-3xl font-bold text-slate-800 mb-4">
+        <h2 class="mb-4 text-3xl font-bold text-slate-800 dark:text-slate-100">
           Project 2: Automated Warehouse and Package Handling System
         </h2>
 
-        <p class="text-slate-700 leading-relaxed mb-6">
+        <p class="mb-6 leading-relaxed text-slate-700 dark:text-slate-300">
           An automated warehouse system designed to receive packages,
           transport them through the system, place them in designated storage
           locations, and retrieve stored packages when requested. The
@@ -92,90 +96,100 @@ const projectTitle = "PLC and Industrial Automation Projects";
           retrieval, and the overall operating sequence of the warehouse.
         </p>
 
-        <!-- Workflow -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 my-8">
+        <!-- WORKFLOW -->
+        <div class="my-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
 
-          <div class="bg-orange-50 border border-orange-100 rounded-xl p-4 text-center">
-            <div class="text-xs font-bold text-orange-500 mb-2">01</div>
-            <h3 class="text-sm font-semibold text-slate-800">
+          <div class="rounded-xl border border-orange-100 bg-orange-50 p-4 text-center dark:border-orange-900 dark:bg-orange-950/40">
+            <div class="mb-2 text-xs font-bold text-orange-600 dark:text-orange-400">
+              01
+            </div>
+            <h3 class="text-sm font-semibold text-slate-800 dark:text-slate-100">
               Package Receiving
             </h3>
-            <p class="text-xs text-slate-500 mt-1">
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400">
               Packages enter the system
             </p>
           </div>
 
-          <div class="bg-orange-50 border border-orange-100 rounded-xl p-4 text-center">
-            <div class="text-xs font-bold text-orange-500 mb-2">02</div>
-            <h3 class="text-sm font-semibold text-slate-800">
+          <div class="rounded-xl border border-orange-100 bg-orange-50 p-4 text-center dark:border-orange-900 dark:bg-orange-950/40">
+            <div class="mb-2 text-xs font-bold text-orange-600 dark:text-orange-400">
+              02
+            </div>
+            <h3 class="text-sm font-semibold text-slate-800 dark:text-slate-100">
               Package Transport
             </h3>
-            <p class="text-xs text-slate-500 mt-1">
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400">
               Packages move through the system
             </p>
           </div>
 
-          <div class="bg-orange-50 border border-orange-100 rounded-xl p-4 text-center">
-            <div class="text-xs font-bold text-orange-500 mb-2">03</div>
-            <h3 class="text-sm font-semibold text-slate-800">
+          <div class="rounded-xl border border-orange-100 bg-orange-50 p-4 text-center dark:border-orange-900 dark:bg-orange-950/40">
+            <div class="mb-2 text-xs font-bold text-orange-600 dark:text-orange-400">
+              03
+            </div>
+            <h3 class="text-sm font-semibold text-slate-800 dark:text-slate-100">
               Automated Storage
             </h3>
-            <p class="text-xs text-slate-500 mt-1">
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400">
               Packages are placed in assigned locations
             </p>
           </div>
 
-          <div class="bg-orange-50 border border-orange-100 rounded-xl p-4 text-center">
-            <div class="text-xs font-bold text-orange-500 mb-2">04</div>
-            <h3 class="text-sm font-semibold text-slate-800">
+          <div class="rounded-xl border border-orange-100 bg-orange-50 p-4 text-center dark:border-orange-900 dark:bg-orange-950/40">
+            <div class="mb-2 text-xs font-bold text-orange-600 dark:text-orange-400">
+              04
+            </div>
+            <h3 class="text-sm font-semibold text-slate-800 dark:text-slate-100">
               Package Retrieval
             </h3>
-            <p class="text-xs text-slate-500 mt-1">
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400">
               Stored packages are retrieved
             </p>
           </div>
 
-          <div class="bg-orange-50 border border-orange-100 rounded-xl p-4 text-center">
-            <div class="text-xs font-bold text-orange-500 mb-2">05</div>
-            <h3 class="text-sm font-semibold text-slate-800">
+          <div class="rounded-xl border border-orange-100 bg-orange-50 p-4 text-center dark:border-orange-900 dark:bg-orange-950/40">
+            <div class="mb-2 text-xs font-bold text-orange-600 dark:text-orange-400">
+              05
+            </div>
+            <h3 class="text-sm font-semibold text-slate-800 dark:text-slate-100">
               Package Output
             </h3>
-            <p class="text-xs text-slate-500 mt-1">
+            <p class="mt-1 text-xs text-slate-600 dark:text-slate-400">
               Packages are transferred to the output
             </p>
           </div>
 
         </div>
 
+        <!-- DEMONSTRATION VIDEO -->
+        <div class="mb-6">
+          <h3 class="mb-3 text-xl font-semibold text-slate-800 dark:text-slate-100">
+            Automated Warehouse Demo
+          </h3>
 
-       <!-- Demo -->
-<div class="mb-6">
-  <h3 class="text-xl font-semibold mb-3">
-    Automated Warehouse Demo
-  </h3>
+          <div class="mx-auto max-w-2xl">
+            <div class="aspect-video w-full overflow-hidden rounded-xl border border-slate-200 bg-slate-950 shadow-md dark:border-slate-700">
+              <iframe
+                class="h-full w-full"
+                src="https://www.youtube.com/embed/-o9QLmBGtNc"
+                title="Automated Warehouse and Package Handling System Demo"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
 
-  <div class="max-w-2xl mx-auto">
-    <div class="aspect-video w-full rounded-xl overflow-hidden shadow-md border border-slate-200">
-      <iframe
-        class="w-full h-full"
-        src="https://www.youtube.com/embed/-o9QLmBGtNc"
-        title="Automated Warehouse and Package Handling System Demo"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </div>
-  </div>
-</div>
-
-        <!-- Source Code -->
-        <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <!-- SOURCE CODE -->
+        <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-700 dark:bg-slate-900 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h4 class="text-lg font-semibold text-slate-800">
+            <h4 class="text-lg font-semibold text-slate-800 dark:text-slate-100">
               PLC Program
             </h4>
 
-            <p class="text-sm text-slate-500">
+            <p class="text-sm text-slate-500 dark:text-slate-400">
               PLC control code for package handling, automated storage,
               retrieval, and warehouse sequencing.
             </p>
@@ -184,21 +198,20 @@ const projectTitle = "PLC and Industrial Automation Projects";
           <a
             href="/files/code/plc-warehouse-code.pdf"
             download
-            class="inline-flex items-center justify-center px-5 py-3 bg-orange-600 hover:bg-orange-700 text-white font-medium rounded-lg transition-colors text-sm shadow-sm"
+            class="inline-flex items-center justify-center rounded-lg bg-orange-600 px-5 py-3 text-sm font-medium text-white shadow-sm transition-colors hover:bg-orange-700 dark:bg-orange-500 dark:hover:bg-orange-400"
           >
             Download Source Code
           </a>
         </div>
-
       </section>
 
     </div>
 
-
-    <footer class="mt-12 pt-6 border-t">
+    <!-- FOOTER -->
+    <footer class="mt-12 border-t border-slate-200 pt-6 dark:border-slate-700">
       <a
         href="/projects"
-        class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center gap-2"
+        class="flex items-center gap-2 font-medium text-indigo-600 transition-colors hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300"
       >
         ← Back to Projects
       </a>

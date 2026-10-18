@@ -7,8 +7,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <!-- Header + Photo -->
     <section class="grid grid-cols-1 gap-6 md:grid-cols-[160px_1fr] md:items-center">
-      <div class="flex md:block justify-center">
-        <div class="h-36 w-36 md:h-40 md:w-40 rounded-full overflow-hidden ring-2 ring-slate-200 shadow-sm bg-slate-100">
+      <div class="flex justify-center md:block">
+        <div class="h-36 w-36 overflow-hidden rounded-full bg-slate-100 shadow-sm ring-2 ring-slate-200 dark:bg-slate-800 dark:ring-slate-700 md:h-40 md:w-40">
           <img
             src="/images/profile.jpg"
             alt="Portrait of the author"
@@ -20,135 +20,147 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div class="space-y-3">
-        <h1 class="text-3xl font-bold tracking-tight text-slate-900">About Me</h1>
-        <p class="text-lg leading-8 text-slate-600">
-         Control engineer by training, teaching robotics alongside my studies. My current interest is safety-critical control — 
-         figuring out where machine learning actually earns a place in systems that can't afford to fail.
-         I spend most of my time somewhere between classical control theory and the messier, more uncertain world of autonomous robots 
-         — and I like explaining that gap to students almost as much as I like working in it.
+        <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
+          About Me
+        </h1>
+        <p class="text-lg leading-8 text-slate-600 dark:text-slate-300">
+          Control engineer by training, teaching robotics alongside my studies. My current interest is safety-critical control —
+          figuring out where machine learning actually earns a place in systems that can't afford to fail.
+          I spend most of my time somewhere between classical control theory and the messier, more uncertain world of autonomous robots
+          — and I like explaining that gap to students almost as much as I like working in it.
         </p>
       </div>
     </section>
 
-<!-- Research Interests + Teaching -->
-<section class="grid gap-8 md:grid-cols-[1fr_0.85fr] md:items-start">
+    <!-- Research Interests + Teaching -->
+    <section class="grid gap-8 md:grid-cols-[1fr_0.85fr] md:items-start">
 
-  <!-- Research Interests -->
-  <div class="space-y-4">
-    <h2 class="text-2xl font-semibold tracking-tight text-slate-900">
-      Research Interests
-    </h2>
+      <!-- Research Interests -->
+      <div class="space-y-4">
+        <h2 class="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
+          Research Interests
+        </h2>
 
-    <ul class="list-disc pl-5 space-y-2 text-slate-600">
-      <li>Robotics</li>
-      <li>Autonomous Vehicles and Systems</li>
-      <li>Intelligent and Learning-Based Control</li>
-      <li>Multi-Agent / Cooperative Control</li>
-      <li>Vehicle platooning</li>
-      <li>UAVs and UGVs</li>
-    </ul>
-  </div>
+        <ul class="list-disc space-y-2 pl-5 text-slate-600 dark:text-slate-300">
+          <li>Robotics</li>
+          <li>Autonomous Vehicles and Systems</li>
+          <li>Intelligent and Learning-Based Control</li>
+          <li>Multi-Agent / Cooperative Control</li>
+          <li>Vehicle platooning</li>
+          <li>UAVs and UGVs</li>
+        </ul>
+      </div>
 
-  <!-- Teaching -->
-  <div class="rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white px-4 py-3.5 shadow-sm">
+      <!-- Teaching -->
+      <div class="rounded-xl border border-slate-200 bg-gradient-to-br from-slate-50 to-white px-4 py-3.5 shadow-sm dark:border-slate-700 dark:from-slate-800 dark:to-slate-900">
 
-    <div class="mb-2.5">
-      <h2 class="text-xl font-semibold tracking-tight text-slate-900">
-        Teaching
-      </h2>
-    </div>
-
-    <div class="space-y-3">
-
-      <!-- Middle School -->
-      <div>
-        <div class="mb-1.5 flex items-baseline gap-2">
-          <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-500">
-            Middle School
-          </h3>
-
-          <span class="text-xs text-slate-400">
-            Robotics Instructor · 3 yrs
-          </span>
+        <div class="mb-2.5">
+          <h2 class="text-xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
+            Teaching
+          </h2>
         </div>
 
-        <div class="flex flex-wrap gap-1.5">
-          <span class="rounded-full bg-blue-50 px-2.5 py-1 text-xs font-medium text-gray-900">
-            Python
-          </span>
-          <span class="rounded-full bg-violet-50 px-2.5 py-1 text-xs font-medium text-violet-900">
-            C++
-          </span>
-          <span class="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-900">
-            Webots
-          </span>
-          <span class="rounded-full bg-amber-50 px-2.5 py-1 text-xs font-medium text-amber-900">
-            Path Planning
-          </span>
-          <span class="rounded-full bg-rose-50 px-2.5 py-1 text-xs font-medium text-rose-900">
-            Search Algorithms
-          </span>
-          <span class="rounded-full bg-cyan-50 px-2.5 py-1 text-xs font-medium text-cyan-900">
-            Electronics
-          </span>
-          <span class="rounded-full bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-900">
-            PCB Design
-          </span>
+        <div class="space-y-3">
+
+          <!-- Middle School -->
+          <div>
+            <div class="mb-1.5 flex items-baseline gap-2">
+              <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                Middle School
+              </h3>
+
+              <span class="text-xs text-slate-400 dark:text-slate-500">
+                Robotics Instructor · 3 yrs
+              </span>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5">
+              <span class="rounded-full bg-blue-50 px-2.5 py-1 text-xs font-medium text-gray-900 dark:bg-blue-950 dark:text-blue-200">
+                Python
+              </span>
+              <span class="rounded-full bg-violet-50 px-2.5 py-1 text-xs font-medium text-violet-900 dark:bg-violet-950 dark:text-violet-200">
+                C++
+              </span>
+              <span class="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-900 dark:bg-emerald-950 dark:text-emerald-200">
+                Webots
+              </span>
+              <span class="rounded-full bg-amber-50 px-2.5 py-1 text-xs font-medium text-amber-900 dark:bg-amber-950 dark:text-amber-200">
+                Path Planning
+              </span>
+              <span class="rounded-full bg-rose-50 px-2.5 py-1 text-xs font-medium text-rose-900 dark:bg-rose-950 dark:text-rose-200">
+                Search Algorithms
+              </span>
+              <span class="rounded-full bg-cyan-50 px-2.5 py-1 text-xs font-medium text-cyan-900 dark:bg-cyan-950 dark:text-cyan-200">
+                Electronics
+              </span>
+              <span class="rounded-full bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200">
+                PCB Design
+              </span>
+            </div>
+          </div>
+
+          <!-- High School -->
+          <div class="border-t border-slate-200 pt-3 dark:border-slate-700">
+            <div class="mb-1.5 flex items-baseline gap-2">
+              <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                High School
+              </h3>
+
+              <span class="text-xs text-slate-400 dark:text-slate-500">
+                Mechatronics Instructor · 1 yr
+              </span>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5">
+              <span class="rounded-full bg-fuchsia-50 px-2.5 py-1 text-xs font-medium text-fuchsia-900 dark:bg-fuchsia-950 dark:text-fuchsia-200">
+                Mechatronics
+              </span>
+              <span class="rounded-full bg-orange-50 px-2.5 py-1 text-xs font-medium text-orange-900 dark:bg-orange-950 dark:text-orange-200">
+                Research Projects
+              </span>
+              <span class="rounded-full bg-teal-50 px-2.5 py-1 text-xs font-medium text-teal-900 dark:bg-teal-950 dark:text-teal-200">
+                Project Design
+              </span>
+              <span class="rounded-full bg-sky-50 px-2.5 py-1 text-xs font-medium text-sky-900 dark:bg-sky-950 dark:text-sky-200">
+                Problem Solving
+              </span>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <!-- High School -->
-      <div class="border-t border-slate-200 pt-3">
-
-        <div class="mb-1.5 flex items-baseline gap-2">
-          <h3 class="text-xs font-semibold uppercase tracking-wider text-slate-500">
-            High School
-          </h3>
-
-          <span class="text-xs text-slate-400">
-            Mechatronics Instructor · 1 yr
-          </span>
-        </div>
-
-        <div class="flex flex-wrap gap-1.5">
-          <span class="rounded-full bg-fuchsia-50 px-2.5 py-1 text-xs font-medium text-fuchsia-900">
-            Mechatronics
-          </span>
-          <span class="rounded-full bg-orange-50 px-2.5 py-1 text-xs font-medium text-orange-900">
-            Research Projects
-          </span>
-          <span class="rounded-full bg-teal-50 px-2.5 py-1 text-xs font-medium text-teal-900">
-            Project Design
-          </span>
-          <span class="rounded-full bg-sky-50 px-2.5 py-1 text-xs font-medium text-sky-900">
-            Problem Solving
-          </span>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-
-</section>
+    </section>
 
     <!-- Education -->
     <section class="space-y-4">
-      <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Education</h2>
+      <h2 class="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
+        Education
+      </h2>
 
-      <div class="border-l-2 border-slate-200 pl-5 space-y-6">
+      <div class="space-y-6 border-l-2 border-slate-200 pl-5 dark:border-slate-700">
         <div class="space-y-1">
-          <h3 class="text-lg font-semibold text-slate-900">Amir Kabir University of Technology, Tehran, Iran</h3>
-          <p class="text-slate-700">B.Sc. in Electrical Engineering – Control Systems and Intelligence</p>
-          <p class="text-sm text-slate-500">Expected Graduation: January 2027</p>
+          <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100">
+            Amirkabir University of Technology, Tehran, Iran
+          </h3>
+          <p class="text-slate-700 dark:text-slate-300">
+            B.Sc. in Electrical Engineering – Control Systems and Intelligence
+          </p>
+          <p class="text-sm text-slate-500 dark:text-slate-400">
+            Expected Graduation: January 2027
+          </p>
         </div>
 
         <div class="space-y-1">
-          <h3 class="text-lg font-semibold text-slate-900">
+          <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100">
             National Organization for Development of Exceptional Talents (Sampad), Tehran, Iran
           </h3>
-          <p class="text-slate-700">High School Diploma, Theoretical and Mathematical Physics</p>
-          <p class="text-sm text-slate-500">2016–2022</p>
+          <p class="text-slate-700 dark:text-slate-300">
+            High School Diploma, Theoretical and Mathematical Physics
+          </p>
+          <p class="text-sm text-slate-500 dark:text-slate-400">
+            2016–2022
+          </p>
         </div>
       </div>
     </section>

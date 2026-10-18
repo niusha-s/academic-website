@@ -6,53 +6,62 @@ const slamFormula = `$$z_t = h(x_t, m) + v_t$$`;
 ---
 
 <BaseLayout title={projectTitle}>
-  <article class="max-w-4xl mx-auto py-10 px-4">
-    <header class="mb-8 border-b pb-6">
-      <h1 class="text-4xl font-extrabold text-slate-900 mb-4">{projectTitle}</h1>
+  <article class="mx-auto max-w-4xl px-4 py-10">
+
+    <header class="mb-8 border-b border-slate-200 pb-6 dark:border-slate-700">
+      <h1 class="mb-4 text-4xl font-extrabold text-slate-900 dark:text-slate-100">
+        {projectTitle}
+      </h1>
+
       <div class="flex gap-2">
-        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Robotics</span>
-        <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium">2025</span>
+        <span class="rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-700 dark:bg-blue-950 dark:text-blue-300">
+          Robotics
+        </span>
+        <span class="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+          2025
+        </span>
       </div>
     </header>
+
     <!-- PROJECT OVERVIEW -->
     <section class="mb-12">
-      <div class="border-l-4 border-gray-300 pl-6 py-1">
-        <h2 class="text-2xl font-bold text-slate-900 mb-4">Project Overview</h2>
+      <div class="border-l-4 border-gray-300 py-1 pl-6 dark:border-slate-600">
+        <h2 class="mb-4 text-2xl font-bold text-slate-900 dark:text-slate-100">
+          Project Overview
+        </h2>
 
-        <div class="prose prose-slate max-w-none">
+        <div class="prose prose-slate max-w-none dark:prose-invert">
           <p>
             This project implements a LiDAR-based autonomous exploration and navigation
-             system in Webots. The robot incrementally builds a 2D occupancy grid from 
-             LiDAR measurements, using GPS and compass data for localization. The resulting map
-             is used for obstacle avoidance, exploration, and autonomous path planning.
+            system in Webots. The robot incrementally builds a 2D occupancy grid from
+            LiDAR measurements, using GPS and compass data for localization. The resulting map
+            is used for obstacle avoidance, exploration, and autonomous path planning.
           </p>
-
-          
         </div>
       </div>
     </section>
+
     <!-- DOCUMENTATION SHORTCUT -->
     <div class="mb-10 flex justify-end">
       <a
         href="#documentation"
-        class="inline-flex items-center gap-2 px-4 py-2
-              bg-slate-50 hover:bg-slate-100
-              border border-slate-200
-              text-slate-700 font-medium text-sm
-              rounded-lg transition-colors"
+        class="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
       >
         View Project Reports →
       </a>
     </div>
 
-    <div class="prose prose-slate max-w-none">
-     <!-- Simulation Demo -->
-      <section class="mb-10">
-        <h2 class="text-2xl font-bold mb-4">Simulation Run</h2>
+    <div class="prose prose-slate max-w-none dark:prose-invert">
 
-        <div class="max-w-2xl mx-auto aspect-video rounded-xl overflow-hidden shadow-md border border-slate-200">
+      <!-- Simulation Demo -->
+      <section class="mb-10">
+        <h2 class="mb-4 text-2xl font-bold text-slate-900 dark:text-slate-100">
+          Simulation Run
+        </h2>
+
+        <div class="mx-auto aspect-video max-w-2xl overflow-hidden rounded-xl border border-slate-200 shadow-md dark:border-slate-700">
           <iframe
-            class="w-full h-full"
+            class="h-full w-full"
             src="https://www.youtube.com/embed/2ku_0QP-7qI"
             title="2D SLAM and Path Planning Simulation"
             frameborder="0"
@@ -62,13 +71,17 @@ const slamFormula = `$$z_t = h(x_t, m) + v_t$$`;
         </div>
       </section>
 
+      <!-- Algorithm Implementation -->
       <section class="mb-10">
-        <h2 class="text-2xl font-bold mb-4">Algorithm Implementation</h2>
-        <p class="text-slate-700 leading-relaxed">
-          LiDAR measurements are transformed into the global frame 
-          and used to update the occupancy grid, with Bresenham's algorithm 
-          applied to trace free space along each LiDAR ray. BFS and DFS are 
-          used for exploration and target selection, while BFS-based path 
+        <h2 class="mb-4 text-2xl font-bold text-slate-900 dark:text-slate-100">
+          Algorithm Implementation
+        </h2>
+
+        <p class="leading-relaxed text-slate-700 dark:text-slate-300">
+          LiDAR measurements are transformed into the global frame
+          and used to update the occupancy grid, with Bresenham's algorithm
+          applied to trace free space along each LiDAR ray. BFS and DFS are
+          used for exploration and target selection, while BFS-based path
           planning generates collision-free routes through known free space.
           A PID controller regulates the robot's heading and forward motion,
           with replanning and stuck/dead-end detection providing recovery
@@ -76,46 +89,57 @@ const slamFormula = `$$z_t = h(x_t, m) + v_t$$`;
         </p>
       </section>
 
-      
-
       <!-- Project Documentation -->
-<section id="documentation" class="mb-10 border-t pt-8">
-  <h2 class="text-2xl font-bold mb-4">Project Documentation</h2>
-
-  <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-    <div>
-      <h3 class="text-lg font-semibold text-slate-800">SLAM Report</h3>
-      <p class="text-sm text-slate-500">
-        Mapping accuracy analysis and path planning algorithm verification.
-      </p>
-    </div>
-
-    <div class="flex flex-wrap gap-3">
-      <a 
-        href="/files/reports/report_2d.pdf" 
-        download
-        class="inline-flex items-center justify-center px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition-colors text-sm shadow-sm"
+      <section
+        id="documentation"
+        class="mb-10 border-t border-slate-200 pt-8 dark:border-slate-700"
       >
-        Download PDF Report
-      </a>
+        <h2 class="mb-4 text-2xl font-bold text-slate-900 dark:text-slate-100">
+          Project Documentation
+        </h2>
 
-      <a 
-        href="https://github.com/niusha-s/webots-2d-slam"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center justify-center px-5 py-3 bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 font-medium rounded-lg transition-colors text-sm"
+        <div class="flex flex-col gap-4 rounded-xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-700 dark:bg-slate-900 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h3 class="text-lg font-semibold text-slate-800 dark:text-slate-100">
+              SLAM Report
+            </h3>
+
+            <p class="text-sm text-slate-500 dark:text-slate-400">
+              Mapping accuracy analysis and path planning algorithm verification.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="/files/reports/report_2d.pdf"
+              download
+              class="inline-flex items-center justify-center rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white shadow-sm transition-colors hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400"
+            >
+              Download PDF Report
+            </a>
+
+            <a
+              href="https://github.com/niusha-s/webots-2d-slam"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-5 py-3 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-100 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
+            >
+              View Source Code
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="mt-12 border-t border-slate-200 pt-6 dark:border-slate-700">
+      <a
+        href="/projects"
+        class="flex items-center gap-2 font-medium text-indigo-600 transition-colors hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-300"
       >
-        View Source Code
-      </a>
-    </div>
-  </div>
-</section>
-    </div>
-
-    <footer class="mt-12 pt-6 border-t">
-      <a href="/projects" class="text-indigo-600 hover:text-indigo-800 font-medium flex items-center gap-2">
         ← Back to Projects
       </a>
     </footer>
+
   </article>
 </BaseLayout>
